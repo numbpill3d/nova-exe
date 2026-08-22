@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --nova-bg: #008080;
+  --nova-surface: #c0c0c0;
+  --nova-surface-alt: #dfdfdf;
+  --nova-text: #000000;
+  --nova-text-muted: #4b4b4b;
+  --nova-accent: #000080;
+  --nova-accent-text: #ffffff;
+  --nova-border: #000000;
+  --nova-shadow: #404040;
+  --nova-radius: 0px;
+  --nova-font: "MS Sans Serif", "Tahoma", sans-serif;
+  --nova-heading-font: "MS Sans Serif", "Tahoma", sans-serif;
+  --nova-cursor: default;
+  --nova-page-bg: #008080;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  background: var(--nova-page-bg);
+  color: var(--nova-text);
+  font-family: var(--nova-font);
+  cursor: var(--nova-cursor);
+  overflow: hidden;
+  transition: background 0.3s ease;
+}
+
+* {
+  cursor: inherit;
+}
+
+button,
+[role="button"] {
+  cursor: var(--nova-cursor);
+}
