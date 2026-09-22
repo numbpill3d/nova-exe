@@ -7,7 +7,7 @@ export default function Home() {
       className="relative w-screen h-screen"
       style={{ background: "var(--nova-page-bg)" }}
     >
-      <div
+      <h1
         className="fixed top-4 left-4 z-[9999] text-2xl font-bold tracking-widest"
         style={{
           fontFamily: "var(--nova-heading-font)",
@@ -16,7 +16,7 @@ export default function Home() {
         }}
       >
         NOVA.EXE
-      </div>
+      </h1>
       <ThemeSwitcher />
       <CanvasClient />
     </main>
