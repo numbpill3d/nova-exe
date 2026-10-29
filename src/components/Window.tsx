@@ -92,23 +92,24 @@ export function Window({
         }}
       >
         <div className="flex items-center gap-1.5">
-          <span
-            onPointerDown={(e) => {
-              e.stopPropagation();
-              toggleMinimize(widget.id);
-            }}
+          <button
+            type="button"
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={() => toggleMinimize(widget.id)}
             className="w-3 h-3 rounded-full inline-block border border-black/40 cursor-pointer"
             style={{ background: "#ffbd44" }}
-            title="Minimize"
+            title={widget.minimized ? "Restore" : "Minimize"}
+            aria-label={`${widget.minimized ? "Restore" : "Minimize"} ${widget.title}`}
+            aria-pressed={widget.minimized}
           />
-          <span
-            onPointerDown={(e) => {
-              e.stopPropagation();
-              removeWidget(widget.id);
-            }}
+          <button
+            type="button"
+            onPointerDown={(e) => e.stopPropagation()}
+            onClick={() => removeWidget(widget.id)}
             className="w-3 h-3 rounded-full inline-block border border-black/40 cursor-pointer"
             style={{ background: "#ff605c" }}
             title="Close"
+            aria-label={`Close ${widget.title}`}
           />
         </div>
         <span className="text-xs font-bold truncate px-1">{widget.title}</span>
